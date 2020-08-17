@@ -18,7 +18,6 @@ class Article(models.Model):
     published_at = models.DateTimeField(verbose_name='Дата публикации')
     image = models.ImageField(null=True, blank=True, verbose_name='Изображение',)
     topic = models.ManyToManyField(Teams, through='Principal', related_name='topices')
-    #main = models.ForeignKey("Principal", on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'Статья'
